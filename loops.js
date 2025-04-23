@@ -8,7 +8,9 @@
 // ****
 // *****
 
-for (let i = 0; i < 5; i++) console.log('*'.repeat(i + 1))
+for (let i = 0; i < 5; i++) {
+    console.log('*'.repeat(i + 1));
+}
 for (let i = 0; i < 5; i++) {
     console.log(' '.repeat(6 - i), '*'.repeat(1 + i) + '*'.repeat(1 + i));
 }
@@ -46,7 +48,9 @@ console.log('==========================================')
 // 'INV-0007'
 // 'INV-0008'
 
-for (let i = 1; i < 9; i++) console.log('INV-00' + i);
+for (let i = 1; i < 9; i++) {
+    console.log('INV-00' + i);
+}
 
 console.log('==========================================')
 
@@ -69,8 +73,15 @@ console.log('==========================================')
 
 for (let i = 9; i < 19; i++) {
     console.log(i + ':00');
-    if (i === 12) console.log('12:00 Lunchpauze');
-    if (i === 17) console.log('17:00 Bijna klaar...')
+    if (i === 12) {
+    } else {
+        console.log(i+':00 Lunchpauze!');
+        continue;
+    }
+    if (i !== 17) {
+        continue;
+    }
+    console.log('17:00 Bijna klaar...')
 
 }
 

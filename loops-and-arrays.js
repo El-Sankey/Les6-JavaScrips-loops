@@ -13,8 +13,41 @@
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 
+for (const meetingTime of meetingTimes) {
+    if (meetingTime == meetingTimes[0]) {
+        console.log('Vergadering om 9:00');
+    } else if (meetingTime == meetingTimes[1]) {
+        console.log('Vergadering om 10:30');
+    } else if (meetingTime == meetingTimes[2]) {
+        console.log('Vergadering om 14:00');
+    } else if (meetingTime == meetingTimes[3]) {
+        console.log('Vergadering om 15:30');
+    } else if (meetingTime == meetingTimes[4]) {
+        console.log('Vergadering om 17:00');
+    }
+}
 
-// ==========================================
+// let array;
+// array = meetingTimes
+// switch (array) {
+//     case (meetingTimes[0]):
+//         console.log('Vergadering 9:00');
+//         break;
+//     case (meetingTimes[1]):
+//         console.log('Vergadering 10:30');
+//         break;
+//     case (meetingTimes[2]):
+//         console.log('Vergadering 14:00');
+//         break;
+//     case (meetingTimes[3]):
+//         console.log('Vergadering 15:30')
+//         break;
+//     case (meetingTimes[4]):
+//         console.log('Vergadering 17:01');
+//         break;
+// }
+
+console.log('==========================================')
 // Opdracht 2. In tegenstelling tot Bob, werken de andere medewerkers van Loop-it Solutions wél hard.
 // Alle medewerkers hebben daarom zojuist 5% salarisverhoging gekregen. Om te voorkomen dat Bob dit handmatig moet aanpassen,
 // schrijf jij een script voor hem dat alle salarissen in onderstaande array met 5% verhoogd.
@@ -26,9 +59,20 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // ==========================================
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
+// for (const salary of salaries) if (salary == salaries[0]) {
+//     console.log(salaries[0] * .05 + 3200);
+// } else if (salary == salaries[1]) {
+//     console.log(salaries[0] * .05 + 2350);
+// }
 
 
-// ==========================================
+for (let i = 0; i < salaries.length; i++) {
+    salaries[i] = salaries[i] * 1.05;
+}
+console.log(salaries);
+
+
+console.log('==========================================')
 // Opdracht 3. Eén van Bob's taken is medewerkers feliciteren met hun "zoveelste" verjaardag.
 // Daarvoor moet hij natuurlijk wel weten hoe oud iemand is geworden - en hoofdrekenen is niet zijn sterkste kant.
 // Schrijf een script dat de array met geboortedata omzet naar een leeftijd, ervan uitgaande dat het huidige jaar 2025 is.
@@ -40,7 +84,7 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 const birthYears = [1995, 1997, 1990, 2003, 1982];
 
 
-// ==========================================
+console.log('==========================================')
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
 // - Even getallen (bijvoorbeeld 2, 4, 6 uur) worden vermenigvuldigd met 2, omdat medewerkers die hun verlof in nette blokken opnemen, worden beloond.
 // - Oneven getallen (bijvoorbeeld 3, 5, 7 uur) worden vermenigvuldigd met 0.5, omdat Bob onregelmatig verlof wil ontmoedigen
@@ -53,7 +97,7 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 const leaveHours = [6, 9, 2, 7, 3];
 
 
-// ==========================================
+console.log('==========================================')
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
 // productiecodes verkeerd genereert en Bob deze altijd met de hand verbetert. Geen wonder dat er zo weinig werk verzet wordt...
 // Elke code bevat onnodige spaties en rare hoofdletters. Schrijf een script dat de codes in één keer corrigeert.
