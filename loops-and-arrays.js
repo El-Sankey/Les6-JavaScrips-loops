@@ -67,7 +67,7 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 
 
 for (let i = 0; i < salaries.length; i++) {
-    salaries[i] = salaries[i] * 1.05;
+    salaries[i] *= 1.05;
 }
 console.log(salaries);
 
